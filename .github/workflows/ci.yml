@@ -41,6 +41,7 @@ jobs:
           git diff --exit-code
 
       - name: Auto-commit updated documentation
+        if: github.ref != 'refs/heads/main'
         run: |
           nix run .#generate-docs
           if ! git diff --quiet docs/; then
