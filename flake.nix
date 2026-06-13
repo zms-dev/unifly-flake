@@ -43,9 +43,7 @@
           ...
         }:
         {
-          packages.unifly = pkgs.callPackage ./pkgs/unifly.nix {
-            apple_sdk = pkgs.apple-sdk;
-          };
+          packages.unifly = pkgs.callPackage ./pkgs/unifly.nix { };
           packages.unifly-docs = pkgs.callPackage ./docs/generator.nix { };
           packages.default = self'.packages.unifly;
 
@@ -123,24 +121,28 @@
         };
 
       flake = {
-        overlays.default = final: prev: {
-          unifly = final.callPackage ./pkgs/unifly.nix {
-            apple_sdk = final.apple-sdk;
-          };
-        };
-
         nixosModules.unifly =
-          { config, pkgs, ... }:
+          {
+            config,
+            pkgs,
+            lib,
+            ...
+          }:
           {
             imports = [ ./modules/nixos.nix ];
-            nixpkgs.overlays = [ self.overlays.default ];
+            programs.unifly.package = lib.mkDefault self.packages.${pkgs.system}.unifly;
           };
 
         homeManagerModules.unifly =
-          { config, pkgs, ... }:
+          {
+            config,
+            pkgs,
+            lib,
+            ...
+          }:
           {
             imports = [ ./modules/home-manager.nix ];
-            nixpkgs.overlays = [ self.overlays.default ];
+            programs.unifly.package = lib.mkDefault self.packages.${pkgs.system}.unifly;
           };
 
         nixosModules.default = self.nixosModules.unifly;
