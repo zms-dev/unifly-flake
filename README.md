@@ -10,6 +10,30 @@ This flake provides reproducible packages, NixOS modules, and Home Manager modul
 
 ---
 
+## ❄️ Binary Cache
+
+This project uses [Cachix](https://cachix.org) to host pre-built binaries on GitHub Actions CI. This allows you to run or install Unifly on Linux and macOS without compiling the package from source locally.
+
+### Automatic Configuration
+When running Nix commands directly on this flake, Nix will automatically prompt you to trust the `unifly-flake` binary cache.
+
+### Manual Configuration
+
+#### Command Line (Imperative):
+```bash
+nix-shell -p cachix --run "cachix use unifly-flake"
+```
+
+#### Declarative NixOS/nix-darwin Configuration:
+```nix
+nix.settings = {
+  substituters = [ "https://unifly-flake.cachix.org" ];
+  trusted-public-keys = [ "unifly-flake.cachix.org-1:UqLoinbuUxFsDIHzjWKacwilVELow9MDeclA16+U/Ak=" ];
+};
+```
+
+---
+
 ## 📦 Packaged Components
 
 This flake packages:

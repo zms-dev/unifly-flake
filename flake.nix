@@ -1,6 +1,13 @@
 {
   description = "Nix flake for unifly - UniFi network management CLI & TUI";
 
+  nixConfig = {
+    extra-substituters = [ "https://unifly-flake.cachix.org" ];
+    extra-trusted-public-keys = [
+      "unifly-flake.cachix.org-1:UqLoinbuUxFsDIHzjWKacwilVELow9MDeclA16+U/Ak="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
