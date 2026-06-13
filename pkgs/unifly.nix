@@ -7,7 +7,6 @@
   dbus,
   cacert,
   stdenv,
-  apple_sdk,
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -34,9 +33,6 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [
     openssl
     dbus
-  ]
-  ++ lib.optionals stdenv.isDarwin [
-    apple_sdk
   ];
 
   preCheck = ''
