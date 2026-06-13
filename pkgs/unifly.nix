@@ -35,13 +35,9 @@ rustPlatform.buildRustPackage rec {
     openssl
     dbus
   ]
-  ++ lib.optionals stdenv.isDarwin (
-    with apple_sdk.frameworks;
-    [
-      Security
-      SystemConfiguration
-    ]
-  );
+  ++ lib.optionals stdenv.isDarwin [
+    apple_sdk
+  ];
 
   preCheck = ''
     export SSL_CERT_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt
