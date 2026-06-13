@@ -36,7 +36,9 @@
           ...
         }:
         {
-          packages.unifly = pkgs.callPackage ./pkgs/unifly.nix { };
+          packages.unifly = pkgs.callPackage ./pkgs/unifly.nix {
+            apple_sdk = pkgs.apple-sdk;
+          };
           packages.unifly-docs = pkgs.callPackage ./docs/generator.nix { };
           packages.default = self'.packages.unifly;
 
@@ -115,7 +117,9 @@
 
       flake = {
         overlays.default = final: prev: {
-          unifly = final.callPackage ./pkgs/unifly.nix { };
+          unifly = final.callPackage ./pkgs/unifly.nix {
+            apple_sdk = final.apple-sdk;
+          };
         };
 
         nixosModules.unifly =

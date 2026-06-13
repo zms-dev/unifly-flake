@@ -7,7 +7,7 @@
   dbus,
   cacert,
   stdenv,
-  darwin,
+  apple_sdk,
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -36,7 +36,7 @@ rustPlatform.buildRustPackage rec {
     dbus
   ]
   ++ lib.optionals stdenv.isDarwin (
-    with darwin.apple_sdk.frameworks;
+    with apple_sdk.frameworks;
     [
       Security
       SystemConfiguration
