@@ -7,7 +7,6 @@
   dbus,
   cacert,
   stdenv,
-  darwin,
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -34,14 +33,7 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [
     openssl
     dbus
-  ]
-  ++ lib.optionals stdenv.isDarwin (
-    with darwin.apple_sdk.frameworks;
-    [
-      Security
-      SystemConfiguration
-    ]
-  );
+  ];
 
   preCheck = ''
     export SSL_CERT_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt

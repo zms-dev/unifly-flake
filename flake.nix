@@ -1,6 +1,13 @@
 {
   description = "Nix flake for unifly - UniFi network management CLI & TUI";
 
+  nixConfig = {
+    extra-substituters = [ "https://unifly-flake.cachix.org" ];
+    extra-trusted-public-keys = [
+      "unifly-flake.cachix.org-1:UqLoinbuUxFsDIHzjWKacwilVELow9MDeclA16+U/Ak="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -114,22 +121,28 @@
         };
 
       flake = {
-        overlays.default = final: prev: {
-          unifly = final.callPackage ./pkgs/unifly.nix { };
-        };
-
         nixosModules.unifly =
-          { config, pkgs, ... }:
+          {
+            config,
+            pkgs,
+            lib,
+            ...
+          }:
           {
             imports = [ ./modules/nixos.nix ];
-            nixpkgs.overlays = [ self.overlays.default ];
+            programs.unifly.package = lib.mkDefault self.packages.${pkgs.system}.unifly;
           };
 
         homeManagerModules.unifly =
-          { config, pkgs, ... }:
+          {
+            config,
+            pkgs,
+            lib,
+            ...
+          }:
           {
             imports = [ ./modules/home-manager.nix ];
-            nixpkgs.overlays = [ self.overlays.default ];
+            programs.unifly.package = lib.mkDefault self.packages.${pkgs.system}.unifly;
           };
 
         nixosModules.default = self.nixosModules.unifly;
