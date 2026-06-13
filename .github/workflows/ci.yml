@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+  workflow_dispatch:
+
+env:
+  NIXPKGS_ALLOW_UNFREE: "1"
+
+jobs:
+  check:
+    name: Lint & Verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v16
+
+      - name: Set up Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: unifly-flake
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        continue-on-error: true
+
+      - name: Check Flake schema & outputs
+        run: nix flake check
+
+      - name: Verify Formatting
+        run: |
+          nix fmt
+          git diff --exit-code
+
+      - name: Auto-commit updated documentation
+        run: |
+          nix run .#generate-docs
+          if ! git diff --quiet docs/; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add docs/configuration.md
+            git commit -m "chore: auto-generate settings documentation"
+            git push
+          fi
+
+  build:
+    name: Build Package
+    runs-on: ${{ matrix.os }}
+    needs: check
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v16
+
+      - name: Set up Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: unifly-flake
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        continue-on-error: true
+
+      - name: Build Unifly
+        run: nix build .#unifly --no-link
