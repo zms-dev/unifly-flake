@@ -194,6 +194,17 @@ let
         };
       };
     };
+  filterNulls =
+    attrs:
+    let
+      clean =
+        v:
+        if builtins.isAttrs v then
+          if lib.isDerivation v then v else lib.filterAttrs (n: v': v' != null) (lib.mapAttrs (n: clean) v)
+        else
+          v;
+    in
+    clean attrs;
 in
 {
   options.programs.unifly = {
@@ -261,7 +272,7 @@ in
     home.packages = [ cfg.package ];
 
     xdg.configFile."unifly/config.toml" = lib.mkIf (cfg.settings != { }) {
-      source = tomlFormat.generate "unifly-config.toml" cfg.settings;
+      source = tomlFormat.generate "unifly-config.toml" (filterNulls cfg.settings);
     };
   };
 }
