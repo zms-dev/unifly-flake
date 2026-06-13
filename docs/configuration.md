@@ -47,7 +47,7 @@ open submodule of (TOML value)
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -71,7 +71,7 @@ null or string
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -95,7 +95,7 @@ submodule
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -119,7 +119,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -143,7 +143,7 @@ one of “auto”, “always”, “never”
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -167,7 +167,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -191,7 +191,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -215,7 +215,7 @@ one of “table”, “json”, “yaml”, “csv”
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -239,7 +239,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -263,7 +263,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -287,7 +287,7 @@ unsigned integer, meaning >=0
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -311,7 +311,7 @@ submodule
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -335,7 +335,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -359,7 +359,7 @@ list of string
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -383,7 +383,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -407,7 +407,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -431,7 +431,7 @@ list of string
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -455,7 +455,7 @@ false
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -479,7 +479,7 @@ true
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -503,7 +503,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -527,7 +527,7 @@ attribute set of (submodule)
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -551,7 +551,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -575,7 +575,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -599,7 +599,7 @@ one of “integration”, “session”, “hybrid”, “cloud”
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -623,7 +623,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -647,7 +647,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -671,7 +671,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -695,7 +695,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -719,7 +719,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -743,7 +743,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -767,7 +767,7 @@ string
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -791,7 +791,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -815,7 +815,7 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
 
 
 
@@ -839,4 +839,4 @@ null
 ```
 
 *Declared by:*
- - [/nix/store/2lk0v7q5xbzydryzizlgsbbxi8b3358y-source/modules/home-manager\.nix]()
+ - [/nix/store/12mcc46ygbd3vdvf075pym35k8hqfqsl-source/modules/home-manager\.nix]()
