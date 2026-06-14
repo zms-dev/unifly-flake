@@ -11,7 +11,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "unifly";
-  version = "0.9.1";
+  version = "latest";
 
   src = fetchFromGitHub {
     owner = "hyperb1iss";
